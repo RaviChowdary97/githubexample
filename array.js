@@ -89,5 +89,100 @@ console.log(output);
 var vel = arr.map((item) => `<p>${item}</p>`);
 console.log(vel);
 
+//binary number
 const out = arr.map((x) => x.toString(2));
 console.log(out);
+
+//filter
+//used to filter out the value
+//it may or may not return the same length of output array as input array
+//only return those data which output or condition is true
+
+var arr = [1, 2, 3, 4, 5];
+
+// function isEven(x){
+//   return x<4
+// }
+
+// const mak=arr.filter(isEven)
+
+// const mak=arr.filter(function isEven(x){
+//   return x<4
+// })
+
+const mak = arr.filter((x) => x == 4);
+
+console.log(mak);
+
+//reduce
+
+var arr = [1, 2, 3, 4, 5];
+
+function findSum(arr) {
+  let sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum;
+}
+
+console.log(findSum(arr));
+
+const vin = arr.reduce(function (acc, curr) {
+  acc = acc + curr;
+  return acc;
+}, 0);
+console.log(vin);
+
+function findMax(arr) {
+  let max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return max;
+}
+
+console.log(findMax(arr));
+
+const mine = arr.reduce(function (max, curr) {
+  // if (curr > max) {
+  //   max = curr;
+  // }
+  return curr > max ? curr : max;
+}, 0);
+
+console.log(mine);
+
+//Array of objects
+
+const users = [
+  { firstName: "Ravi", lastName: "Teja", age: 20 },
+  { firstName: "Muthu", lastName: "Gowri", age: 22 },
+  {
+    firstName: "Vijay",
+    lastName: "Antony",
+    age: 20,
+  },
+];
+
+const usrData = users.map((usr) => usr.firstName + " " + usr.lastName);
+console.log(usrData);
+
+const usrData1 = users.reduce(function (acc, curr) {
+  if (acc[curr.age]) {
+    acc[curr.age] = ++acc[curr.age];
+  } else {
+    acc[curr.age] = 1;
+  }
+  return acc;
+}, {});
+
+console.log(usrData1);
+
+//filter + map
+
+const userOut = users.filter((usr) => usr.age > 20).map((usr) => usr.firstName);
+
+console.log(userOut);
