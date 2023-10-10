@@ -1,1 +1,15 @@
-created successfully
+HTML --> Hyper Text Markup Language
+
+Hyper Text  --> refers to connect web pages to another
+
+Markup --> display content on web browser => include elements  i.e., img ,header, footer.
+
+
+Block level elements
+  >> always start with new line 
+  >>occupy the whole width
+  >> eg: p, heading, div
+
+Inline elements 
+    >> start in the same line
+    >> eg: span
