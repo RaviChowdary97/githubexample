@@ -13,3 +13,12 @@ Block level elements
 Inline elements 
     >> start in the same line
     >> eg: span
+
+
+    BOOTSTRAP
+    -----------------
+    => bootstrap is a front-end framework
+    =>predefined templates ===>buton, table, form, image carousels...
+    =>  Advantages
+            =>Easy and faster
+            =>Responsive
